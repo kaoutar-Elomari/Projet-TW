@@ -59,13 +59,13 @@ public class CommentController {
             ComRepo.deleteById(id);
             Optional<Comment> deletedComment = ComRepo.findById(id);
             if (!deletedComment.isPresent()) {
-                return new ResponseEntity<>("ZNG-25", HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>("NOT FOUND", HttpStatus.NOT_FOUND);
             } else {
-                return new ResponseEntity<>("ZNG-15", HttpStatus.OK);
+                return new ResponseEntity<>("OK", HttpStatus.OK);
             }
         }
         else {
-            return new ResponseEntity<>("ZNG-22", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("NOT FOUND", HttpStatus.NOT_FOUND);
         }
     }
 
